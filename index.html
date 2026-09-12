@@ -869,6 +869,438 @@ footer a:hover {
 
 }
    /* =====================================================
+   CARD EXTRA - CANIS E AFIXOS
+===================================================== */
+
+.bloodline-legacy-card {
+  width: 100%;
+  max-width: 1150px;
+  margin: 70px auto 20px;
+  padding: 55px 45px 45px;
+
+  border: 2px solid #c9a45c;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(201, 164, 92, 0.08),
+      rgba(0, 0, 0, 0.98) 70%
+    );
+
+  box-shadow:
+    0 0 40px rgba(201, 164, 92, 0.12),
+    inset 0 0 35px rgba(201, 164, 92, 0.04);
+
+  position: relative;
+}
+
+
+/* DETALHE SUPERIOR */
+
+.bloodline-legacy-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -2px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 220px;
+  height: 3px;
+
+  background: #c9a45c;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.bloodline-legacy-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  text-align: center;
+}
+
+.bloodline-legacy-title > span {
+  width: 150px;
+  height: 1px;
+
+  background: #9f7f42;
+}
+
+.bloodline-legacy-title small {
+  display: block;
+
+  color: #f6a735;
+
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  letter-spacing: 5px;
+}
+
+.bloodline-legacy-title h3 {
+  margin-top: 5px;
+
+  color: #ffffff;
+
+  font-family: Georgia, serif;
+
+  font-size: 42px;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   NÚMERO 14
+===================================================== */
+
+.bloodline-number {
+  text-align: center;
+
+  margin-top: 15px;
+
+  color: #f6a735;
+
+  font-family: Georgia, serif;
+
+  font-size: 100px;
+
+  line-height: 0.9;
+
+  text-shadow:
+    0 0 20px rgba(246, 167, 53, 0.35);
+}
+
+.bloodline-subtitle {
+  text-align: center;
+
+  color: #f6a735;
+
+  font-family: Georgia, serif;
+
+  font-size: 26px;
+
+  letter-spacing: 5px;
+
+  margin-top: 12px;
+}
+
+.bloodline-description {
+  text-align: center;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  letter-spacing: 3px;
+
+  margin-top: 8px;
+}
+
+
+/* =====================================================
+   DIVISORES
+===================================================== */
+
+.bloodline-divider {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin: 35px 0 25px;
+}
+
+.bloodline-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background: #9f7f42;
+}
+
+.bloodline-divider h4 {
+  color: #f6a735;
+
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  font-weight: normal;
+
+  letter-spacing: 4px;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   GRID DOS 14 CANIS
+===================================================== */
+
+.bloodline-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+  gap: 15px;
+}
+
+.bloodline-item {
+  min-height: 95px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 15px;
+
+  border: 1px solid #c9a45c;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.035),
+      rgba(0,0,0,0.65)
+    );
+
+  transition: 0.3s;
+}
+
+.bloodline-item:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 10px 25px rgba(201,164,92,0.18);
+}
+
+.bloodline-item strong {
+  color: #ffffff;
+
+  font-family: Georgia, serif;
+
+  font-size: 13px;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1.4;
+}
+
+
+/* =====================================================
+   ANCESTRAIS
+===================================================== */
+
+.ancestors-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 15px;
+}
+
+.ancestor-item {
+  padding: 18px 12px;
+
+  text-align: center;
+
+  border: 1px solid rgba(201,164,92,0.55);
+
+  background: rgba(255,255,255,0.025);
+}
+
+.ancestor-item strong {
+  display: block;
+
+  color: #f6a735;
+
+  font-family: Georgia, serif;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 8px;
+}
+
+.ancestor-item p {
+  color: #ffffff;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   TEXTO FINAL
+===================================================== */
+
+.bloodline-story {
+  max-width: 900px;
+
+  margin: 10px auto 0;
+
+  text-align: center;
+}
+
+.bloodline-story p {
+  color: #ffffff;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  max-width: 850px;
+
+  margin: auto;
+}
+
+.bloodline-signature {
+  margin-top: 25px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(159,127,66,0.4);
+
+  color: #f6a735;
+
+  font-family: Georgia, serif;
+
+  font-size: 13px;
+
+  letter-spacing: 4px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .bloodline-legacy-card {
+    padding: 40px 20px;
+  }
+
+  .bloodline-legacy-title > span {
+    width: 40px;
+  }
+
+  .bloodline-legacy-title small {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .bloodline-legacy-title h3 {
+    font-size: 30px;
+  }
+
+  .bloodline-number {
+    font-size: 80px;
+  }
+
+  .bloodline-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .ancestors-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .bloodline-legacy-card {
+    margin-top: 50px;
+
+    padding: 35px 12px;
+  }
+
+  .bloodline-legacy-title {
+    gap: 10px;
+  }
+
+  .bloodline-legacy-title > span {
+    width: 25px;
+  }
+
+  .bloodline-legacy-title small {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .bloodline-legacy-title h3 {
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+
+  .bloodline-number {
+    font-size: 70px;
+  }
+
+  .bloodline-subtitle {
+    font-size: 19px;
+    letter-spacing: 3px;
+  }
+
+  .bloodline-divider {
+    gap: 8px;
+  }
+
+  .bloodline-divider h4 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    white-space: normal;
+  }
+
+  .bloodline-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .bloodline-item {
+    min-height: 75px;
+    padding: 10px 5px;
+  }
+
+  .bloodline-item strong {
+    font-size: 10px;
+  }
+
+  .bloodline-signature {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+}
+   /* =====================================================
    RESPONSIVO
 ===================================================== */
 
@@ -1364,7 +1796,138 @@ Liu Haze
 
     </div>
   </div>
+<!-- =====================================================
+       CARD EXTRA - CANIS E AFIXOS DA LINHAGEM
+  ====================================================== -->
 
+  <div class="bloodline-legacy-card">
+
+    <div class="bloodline-legacy-title">
+
+      <span></span>
+
+      <div>
+        <small>LINHAGENS QUE CONSTROEM</small>
+        <h3>LIU HAZE</h3>
+      </div>
+
+      <span></span>
+
+    </div>
+
+    <div class="bloodline-divider">
+      <span></span>
+      <h4>OS CANIS E AFIXOS PRESENTES NA LINHAGEM</h4>
+      <span></span>
+    </div>
+
+
+    <div class="bloodline-grid">
+
+      <div class="bloodline-item">
+        <strong>BIRA BULLY</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>GVBULLIES</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>EXCELLENCE BULLIES</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>BULLY RANCH</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>SUNSHINEBULLS</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>USBF</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>GOTTILINE KINGS</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>JAIRON BULLS</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>HOUSE OF BULLIES</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>AVELAR BULLY</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>DAXLINES</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>BOSS BULLY CAMP</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>THE KING OF BULLS</strong>
+      </div>
+
+      <div class="bloodline-item">
+        <strong>ALIANCE BULLY</strong>
+      </div>
+
+    </div>
+
+
+    <div class="bloodline-divider bottom-divider">
+      <span></span>
+      <h4>ANCESTRAIS DE DESTAQUE</h4>
+      <span></span>
+    </div>
+
+
+    <div class="ancestors-grid">
+
+      <div class="ancestor-item">
+        <strong>BIRA BULLY</strong>
+        <p>Biggie Smalls • Kali • Nilo<br>JP Sara • Zed • Gana</p>
+      </div>
+
+      <div class="ancestor-item">
+        <strong>GVBULLIES</strong>
+        <p>Rino Capitan Loco</p>
+      </div>
+
+      <div class="ancestor-item">
+        <strong>SUNSHINEBULLS</strong>
+        <p>Brutus of Aliance Bully<br>Exotic Crazy • Boomboom</p>
+      </div>
+
+      <div class="ancestor-item">
+        <strong>AVELAR BULLY</strong>
+        <p>Mystica • Chelsea<br>Mr Boy Star Bully</p>
+      </div>
+
+      <div class="ancestor-item">
+        <strong>GOTTILINE KINGS</strong>
+        <p>Crazy Dutch</p>
+      </div>
+
+    </div>
+
+
+    <div class="bloodline-story">
+
+      <div class="bloodline-divider">
+        <span></span>
+        <h4>GENÉTICA QUE CONTA UMA HISTÓRIA</h4>
+        <span></span>
+
+  </div>
 </section>
 
   <!-- =====================================================
