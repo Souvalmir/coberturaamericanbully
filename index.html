@@ -698,7 +698,176 @@ footer a:hover {
     color:#ffffff;
     transform:translateY(-4px) scale(1.12);
 }
-   
+   /* =====================================================
+   CARD CENTRAL - ÁRVORE GENEALÓGICA
+===================================================== */
+
+.lineage-tree-card {
+  max-width: 1000px;
+  margin: 70px auto 10px;
+  padding: 35px 30px 30px;
+
+  border: 2px solid #c9a45c;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(201, 164, 92, 0.08),
+      rgba(0, 0, 0, 0.96) 72%
+    );
+
+  box-shadow:
+    0 0 35px rgba(201, 164, 92, 0.12),
+    inset 0 0 30px rgba(201, 164, 92, 0.04);
+
+  position: relative;
+}
+
+/* DETALHE DOURADO SUPERIOR */
+
+.lineage-tree-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -2px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 180px;
+  height: 3px;
+
+  background: #c9a45c;
+}
+
+
+/* TÍTULO */
+
+.lineage-tree-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.lineage-tree-title span {
+  width: 90px;
+  height: 1px;
+
+  background: #9f7f42;
+}
+
+.lineage-tree-title h3 {
+  color: #f1d49b;
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  font-weight: normal;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* IMAGEM DA ÁRVORE */
+
+.lineage-tree-image {
+  display: block;
+
+  width: 100%;
+  max-width: 850px;
+
+  height: auto;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+
+  border: 1px solid rgba(201, 164, 92, 0.5);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+
+/* RODAPÉ DO CARD */
+
+.lineage-tree-footer {
+  text-align: center;
+
+  margin-top: 25px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(159, 127, 66, 0.4);
+}
+
+.lineage-tree-footer strong {
+  color: #f1d49b;
+
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+
+  letter-spacing: 3px;
+}
+
+.lineage-tree-footer p {
+  margin-top: 8px;
+
+  color: #999;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   ÁRVORE - MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .lineage-tree-card {
+    padding: 25px 12px;
+    margin-top: 50px;
+  }
+
+  .lineage-tree-title {
+    gap: 10px;
+  }
+
+  .lineage-tree-title span {
+    width: 30px;
+  }
+
+  .lineage-tree-title h3 {
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+
+  .lineage-tree-image {
+    width: 100%;
+  }
+
+  .lineage-tree-footer strong {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+}
    /* =====================================================
    RESPONSIVO
 ===================================================== */
@@ -1169,7 +1338,31 @@ Liu Haze
 </div>
 
     </div>
+ <!-- ÁRVORE GENEALÓGICA -->
 
+    <div class="lineage-tree-card">
+
+      <div class="lineage-tree-title">
+        <span></span>
+        <h3>ÁRVORE GENEALÓGICA</h3>
+        <span></span>
+      </div>
+
+      <img
+        src="arvore.png"
+        alt="Árvore genealógica da linhagem de Liu Haze"
+        class="lineage-tree-image"
+      >
+
+      <div class="lineage-tree-footer">
+        <strong>LINHAGEM • GENÉTICA • EVOLUÇÃO</strong>
+
+        <p>
+          A origem genética que conduz à formação de Liu Haze.
+        </p>
+      </div>
+
+    </div>
   </div>
 
 </section>
