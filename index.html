@@ -800,6 +800,102 @@ footer a:hover {
     0 10px 35px rgba(0, 0, 0, 0.5);
 }
 
+   /* =====================================================
+   ÁRVORE GENEALÓGICA — EXPANSÃO SOMENTE NO MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .lineage-tree-image {
+    cursor: zoom-in;
+  }
+
+}
+
+
+/* LIGHTBOX DA ÁRVORE */
+
+.arvore-mobile-lightbox {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.97);
+
+  z-index: 9998;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+}
+
+.arvore-mobile-lightbox.active {
+  display: flex;
+}
+
+.arvore-mobile-lightbox img {
+  max-width: 98vw;
+  max-height: 95vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border: 2px solid #c9a45c;
+
+  box-shadow:
+    0 0 50px rgba(201, 164, 92, 0.25);
+
+  cursor: zoom-out;
+}
+
+.arvore-mobile-close {
+  position: absolute;
+
+  top: 15px;
+  right: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid #c9a45c;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  color: #f6a735;
+
+  font-size: 30px;
+
+  line-height: 40px;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  z-index: 10000;
+}
+
+.arvore-mobile-close:hover {
+  background: #c9a45c;
+  color: #050505;
+}
+
+
+/* DESKTOP — LIGHTBOX NÃO EXISTE */
+
+@media (min-width: 601px) {
+
+  .arvore-mobile-lightbox {
+    display: none !important;
+  }
+
+}
 
 /* RODAPÉ DO CARD */
 
@@ -1563,11 +1659,11 @@ footer a:hover {
     <div class="hero-slide active">
   <img src="lili.jpeg" alt="Cobertura American Bully na Paraíba com Liu Haze">
 </div>
-   </div>
+  
     <div class="hero-slide active">
   <img src="lili1.jpeg" alt="Cobertura American Bully">
 </div>
-</div>
+
     <div class="hero-slide active">
   <img src="lili2.jpeg" alt="Cobertura American Bully Exotic">
 </div>
@@ -1870,11 +1966,12 @@ Liu Haze
         <span></span>
       </div>
 
-      <img
-        src="arvore.png"
-        alt="Árvore genealógica da linhagem de Liu Haze"
-        class="lineage-tree-image"
-      >
+     <img
+  src="arvore.png"
+  alt="Árvore genealógica da linhagem de Liu Haze"
+  class="lineage-tree-image"
+  onclick="abrirArvoreMobile()"
+>
 
       <div class="lineage-tree-footer">
         <strong>PEDIGREE • LINHAGEM • GENÉTICA • SELEÇÃO • EVOLUÇÃO</strong>
@@ -2332,24 +2429,27 @@ Liu Haze
 
 </script>
 
-     <!-- =====================================================
-     LIGHTBOX DO PEDIGREE
+<!-- =====================================================
+     LIGHTBOX DA ÁRVORE — SOMENTE MOBILE
 ===================================================== -->
 
-<div class="pedigree-lightbox" id="pedigreeLightbox">
+<div
+  class="arvore-mobile-lightbox"
+  id="arvoreMobileLightbox"
+>
 
   <button
-    class="pedigree-lightbox-close"
-    onclick="fecharPedigree()"
-    aria-label="Fechar"
+    class="arvore-mobile-close"
+    onclick="fecharArvoreMobile()"
+    aria-label="Fechar árvore genealógica"
   >
     ×
   </button>
 
   <img
-    src="pedigree.jpeg"
-    alt="Pedigree de Liu Haze ampliado"
-    onclick="fecharPedigree()"
+    src="arvore.png"
+    alt="Árvore genealógica de Liu Haze ampliada"
+    onclick="fecharArvoreMobile()"
   >
 
 </div>
@@ -2357,22 +2457,26 @@ Liu Haze
 
 <script>
 
-function abrirPedigree() {
+function abrirArvoreMobile() {
 
-  document
-    .getElementById("pedigreeLightbox")
-    .classList
-    .add("active");
+  if (window.innerWidth <= 600) {
 
-  document.body.style.overflow = "hidden";
+    document
+      .getElementById("arvoreMobileLightbox")
+      .classList
+      .add("active");
+
+    document.body.style.overflow = "hidden";
+
+  }
 
 }
 
 
-function fecharPedigree() {
+function fecharArvoreMobile() {
 
   document
-    .getElementById("pedigreeLightbox")
+    .getElementById("arvoreMobileLightbox")
     .classList
     .remove("active");
 
@@ -2382,12 +2486,12 @@ function fecharPedigree() {
 
 
 document
-  .getElementById("pedigreeLightbox")
+  .getElementById("arvoreMobileLightbox")
   .addEventListener("click", function(event) {
 
     if (event.target === this) {
 
-      fecharPedigree();
+      fecharArvoreMobile();
 
     }
 
@@ -2398,7 +2502,7 @@ document.addEventListener("keydown", function(event) {
 
   if (event.key === "Escape") {
 
-    fecharPedigree();
+    fecharArvoreMobile();
 
   }
 
