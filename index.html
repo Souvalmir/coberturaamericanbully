@@ -2332,7 +2332,10 @@ Liu Haze
 
 </script>
 
-     <!-- LIGHTBOX DO PEDIGREE -->
+     <!-- =====================================================
+     LIGHTBOX DO PEDIGREE
+===================================================== -->
+
 <div class="pedigree-lightbox" id="pedigreeLightbox">
 
   <button
@@ -2344,36 +2347,65 @@ Liu Haze
   </button>
 
   <img
-    src="pedigree.png"
+    src="pedigree.jpeg"
     alt="Pedigree de Liu Haze ampliado"
     onclick="fecharPedigree()"
   >
 
 </div>
 
+
 <script>
 
 function abrirPedigree() {
-  document.getElementById("pedigreeLightbox").classList.add("active");
+
+  document
+    .getElementById("pedigreeLightbox")
+    .classList
+    .add("active");
+
   document.body.style.overflow = "hidden";
+
 }
+
 
 function fecharPedigree() {
-  document.getElementById("pedigreeLightbox").classList.remove("active");
+
+  document
+    .getElementById("pedigreeLightbox")
+    .classList
+    .remove("active");
+
   document.body.style.overflow = "";
+
 }
 
-document.getElementById("pedigreeLightbox").addEventListener("click", function(event) {
-  if (event.target === this) {
-    fecharPedigree();
-  }
-});
+
+document
+  .getElementById("pedigreeLightbox")
+  .addEventListener("click", function(event) {
+
+    if (event.target === this) {
+
+      fecharPedigree();
+
+    }
+
+  });
+
 
 document.addEventListener("keydown", function(event) {
+
   if (event.key === "Escape") {
+
     fecharPedigree();
+
   }
+
 });
+
+</script>
+
 
 </body>
 
