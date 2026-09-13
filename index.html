@@ -2119,14 +2119,18 @@ Liu Haze
     </div>
 
 
-    <div class="bloodline-story">
+   <div class="bloodline-story">
 
       <div class="bloodline-divider">
         <span></span>
         <h4>GENÉTICA QUE CONTA UMA HISTÓRIA</h4>
         <span></span>
+      </div>
+
+    </div>
 
   </div>
+
 </section>
 
   <!-- =====================================================
@@ -2428,7 +2432,82 @@ Liu Haze
   iniciarCarrossel();
 
 </script>
+<!-- =====================================================
+     LIGHTBOX DO PEDIGREE
+===================================================== -->
 
+<div
+  class="pedigree-lightbox"
+  id="pedigreeLightbox"
+>
+
+  <button
+    class="pedigree-lightbox-close"
+    onclick="fecharPedigree()"
+    aria-label="Fechar pedigree"
+  >
+    ×
+  </button>
+
+  <img
+    src="pedigree.jpeg"
+    alt="Pedigree de Liu Haze ampliado"
+    onclick="fecharPedigree()"
+  >
+
+</div>
+
+
+<script>
+
+function abrirPedigree() {
+
+  document
+    .getElementById("pedigreeLightbox")
+    .classList
+    .add("active");
+
+  document.body.style.overflow = "hidden";
+
+}
+
+
+function fecharPedigree() {
+
+  document
+    .getElementById("pedigreeLightbox")
+    .classList
+    .remove("active");
+
+  document.body.style.overflow = "";
+
+}
+
+
+document
+  .getElementById("pedigreeLightbox")
+  .addEventListener("click", function(event) {
+
+    if (event.target === this) {
+
+      fecharPedigree();
+
+    }
+
+  });
+
+
+document.addEventListener("keydown", function(event) {
+
+  if (event.key === "Escape") {
+
+    fecharPedigree();
+
+  }
+
+});
+
+</script>
 <!-- =====================================================
      LIGHTBOX DA ÁRVORE — SOMENTE MOBILE
 ===================================================== -->
