@@ -991,7 +991,67 @@ footer a:hover {
   background: #ffffff;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
 }
+.liu-pedigree img {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.liu-pedigree img:hover {
+  box-shadow: 0 15px 45px rgba(201, 164, 92, 0.25);
+}
+
+/* =====================================================
+   LIGHTBOX — PEDIGREE LIU HAZE
+===================================================== */
+
+.pedigree-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.96);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.pedigree-lightbox.active {
+  display: flex;
+}
+
+.pedigree-lightbox img {
+  max-width: 95vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 2px solid #c9a45c;
+  box-shadow: 0 0 50px rgba(201, 164, 92, 0.25);
+  cursor: zoom-out;
+}
+
+.pedigree-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #c9a45c;
+  background: rgba(0, 0, 0, 0.7);
+  color: #f6a735;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.pedigree-lightbox-close:hover {
+  background: #c9a45c;
+  color: #050505;
+}
 /* =====================================================
    NÚMERO 14
 ===================================================== */
@@ -1839,12 +1899,13 @@ Liu Haze
   <div>
 
     <!-- IMAGEM DO PEDIGREE -->
-    <div class="liu-pedigree">
-      <img
-        src="pedigree.jpeg"
-        alt="Pedigree de Liu Haze"
-      >
-    </div>
+   <div class="liu-pedigree">
+  <img
+    src="pedigree.jpeg"
+    alt="Pedigree de Liu Haze"
+    onclick="abrirPedigree()"
+  >
+</div>
 
     <small>LINHAGENS QUE CONSTROEM</small>
 
@@ -2271,6 +2332,48 @@ Liu Haze
 
 </script>
 
+     <!-- LIGHTBOX DO PEDIGREE -->
+<div class="pedigree-lightbox" id="pedigreeLightbox">
+
+  <button
+    class="pedigree-lightbox-close"
+    onclick="fecharPedigree()"
+    aria-label="Fechar"
+  >
+    ×
+  </button>
+
+  <img
+    src="pedigree.png"
+    alt="Pedigree de Liu Haze ampliado"
+    onclick="fecharPedigree()"
+  >
+
+</div>
+
+<script>
+
+function abrirPedigree() {
+  document.getElementById("pedigreeLightbox").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function fecharPedigree() {
+  document.getElementById("pedigreeLightbox").classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+document.getElementById("pedigreeLightbox").addEventListener("click", function(event) {
+  if (event.target === this) {
+    fecharPedigree();
+  }
+});
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    fecharPedigree();
+  }
+});
 
 </body>
 
