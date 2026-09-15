@@ -65,6 +65,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
  
   <style>
 
+#pedigree {
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 900px) {
+  #pedigree {
+    scroll-margin-top: 190px;
+  }
+}
+   
     /* =====================================================
        CONFIGURAÇÕES GERAIS
     ===================================================== */
@@ -224,7 +234,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
       z-index: 5;
     }
-
+.hero-content h2 {
+    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
 
     /* TÍTULO */
 
@@ -1229,17 +1246,7 @@ footer a:hover {
   text-transform: uppercase;
 }
 
-   .bloodline-legacy-title h3 {
-  margin-top: 5px;
-  color: #ffffff;
-  font-family: Georgia, serif;
-  font-size: 42px;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-}
-
-
-/* =====================================================
+ /* =====================================================
    IMAGEM DO PEDIGREE — LIU HAZE
 ===================================================== */
 
@@ -1558,6 +1565,11 @@ footer a:hover {
 
 @media (max-width: 900px) {
 
+.hero-content h2 {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+ 
   .bloodline-legacy-card {
     padding: 40px 20px;
   }
@@ -1733,6 +1745,17 @@ footer a:hover {
 
 }
    
+@media (max-width: 600px) {
+  header {
+    padding: 15px 10px;
+  }
+
+  nav a {
+    margin: 5px 6px;
+    font-size: 12px;
+  }
+}
+   
   </style>
 
 </head>
@@ -1747,13 +1770,9 @@ footer a:hover {
 
   <header>
 
-    <div class="logo">
-       <a href="#home" class="logo">
-
+   <a href="#home" class="logo">
   <img src="newlogo.png" alt="Liu Haze">
-
 </a>
-      </div>
 
     <nav>
 
@@ -1768,7 +1787,11 @@ footer a:hover {
       <a href="#linhagem">
         LINHAGEM
       </a>
-      
+
+     <a href="#pedigree">
+        PEDIGREE
+      </a>
+     
       <a href="#cobertura">
         COBERTURA
       </a>
@@ -2155,37 +2178,43 @@ Liu Haze
 
     </div>
   </div>
-<!-- =====================================================
-       CARD EXTRA - CANIS E AFIXOS DA LINHAGEM
+ </section>
+
+ 
+  <!-- =====================================================
+       Pedigree
+  ====================================================== -->
+ <section id="pedigree">
+
+  <!-- =====================================================
+       CARD PEDIGREE — LINHAGENS E ANCESTRAIS
   ====================================================== -->
 
   <div class="bloodline-legacy-card">
 
     <div class="bloodline-legacy-title">
 
-  <span></span>
+      <span></span>
 
-  <div>
+      <div>
+        <small>LINHAGENS QUE CONSTROEM</small>
+        <h3>LIU HAZE</h3>
+      </div>
+
+      <span></span>
+
+    </div>
 
     <!-- IMAGEM DO PEDIGREE -->
-   <div class="liu-pedigree">
-  <img
-    src="pedigree.jpeg"
-    alt="Pedigree de Liu Haze"
-    onclick="abrirPedigree()"
-  >
-</div>
+    <div class="liu-pedigree">
 
-    <small>LINHAGENS QUE CONSTROEM</small>
+      <img
+        src="pedigree.jpeg"
+        alt="Pedigree de Liu Haze"
+        onclick="abrirPedigree()"
+      >
 
-    <h3>LIU HAZE</h3>
-
-  </div>
-
-  <span></span>
-
-</div>
-
+    </div>
     <div class="bloodline-divider">
       <span></span>
       <h4>OS CANIS E AFIXOS PRESENTES NA LINHAGEM</h4>
@@ -2306,48 +2335,56 @@ Liu Haze
 </section>
 
   <!-- =====================================================
-       COBERTURA
-  ====================================================== -->
+     COBERTURA
+====================================================== -->
 
-  <section id="cobertura">
+<section id="cobertura">
 
-    <div class="box">
+  <div class="box">
 
-      <h2>
-        Cobertura American Bully Exotic
-      </h2>
+    <h2>
+      Cobertura American Bully Exotic
+    </h2>
 
-      <p>
-        Liu é um Exotic Bully Tri Blue Merle e está disponível para reprodução.
+    <p>
+      Liu é um Exotic Bully Tri Blue Merle e está disponível para reprodução.
 
-        Para informações sobre valor, coleta,
-        inseminação e disponibilidade,
-        entre em contato pelo WhatsApp, te daremos todo o suporte.
-      </p>
-
-    </div>
-<section class="box" style="margin-top:40px;">
-
-  <h2>Cobertura American Bully</h2>
-
-  <p>
-    Liu Haze é um Exotic Bully Tri Blue Merle disponível para cobertura.
-   Seu pedigree reúne linhagens reconhecidas, oferecendo genética de alta qualidade para criadores que buscam melhorar
-   estrutura, temperamento e padrão da raça.
-  </p>
-
-  <br>
-
-  <p>
-   Atendemos todo o Brasil, com possibilidade de coleta e envio de sêmen mediante agendamento. Consulte disponibilidade, valores e condições para cobertura.
+      Para informações sobre valor, coleta,
+      inseminação e disponibilidade,
+      entre em contato pelo WhatsApp. 
+      Te daremos todo o suporte.
     </p>
 
-  <p>
-     <strong>Aconselhamos</strong> que a fêmea realize exame de progesterona ou citologia para identificar o período fértil e determinar o momento ideal para a cobertura.
-  </p>
+  </div>
+
+  <div class="box" style="margin-top:40px;">
+
+    <h2>Cobertura American Bully</h2>
+
+    <p>
+      Liu Haze é um Exotic Bully Tri Blue Merle disponível para cobertura.
+      Seu pedigree reúne linhagens reconhecidas, oferecendo genética de alta
+      qualidade para criadores que buscam melhorar estrutura, temperamento
+      e padrão da raça.
+    </p>
+
+    <br>
+
+    <p>
+      Atendemos todo o Brasil, com possibilidade de coleta e envio de sêmen
+      mediante agendamento. Consulte disponibilidade, valores e condições
+      para cobertura.
+    </p>
+
+    <p>
+      <strong>Aconselhamos</strong> que a fêmea realize exame de progesterona
+      ou citologia para identificar o período fértil e determinar o momento
+      ideal para a cobertura.
+    </p>
+
+  </div>
 
 </section>
-
    <!-- =====================================================
      CTA FINAL — WHATSAPP
 ===================================================== -->
@@ -2379,8 +2416,6 @@ Liu Haze
   </a>
 
 </div>
-
-  </section>
 
 
   <!-- =====================================================
