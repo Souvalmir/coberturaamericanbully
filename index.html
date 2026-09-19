@@ -1284,18 +1284,6 @@ footer a:hover {
 }
 
 
-/* DESKTOP — NÃO ABRE LIGHTBOX */
-
-@media (min-width: 601px) {
-
-  .pedexliu-mobile-lightbox {
-    display: none !important;
-  }
-
-}
-
-
-
 /* =====================================================
    ÁRVORE - MOBILE
 ===================================================== */
@@ -2875,9 +2863,6 @@ Liu Haze
 
 </script>
 
- <!-- =====================================================
-     LIGHTBOX PEDEX LIU HAZE — SOMENTE MOBILE
-===================================================== -->
 
 <div
   class="pedexliu-mobile-lightbox"
@@ -2905,16 +2890,12 @@ Liu Haze
 
 function abrirPedexLiu() {
 
-  if (window.innerWidth <= 600) {
+  document
+    .getElementById("pedexLiuLightbox")
+    .classList
+    .add("active");
 
-    document
-      .getElementById("pedexLiuLightbox")
-      .classList
-      .add("active");
-
-    document.body.style.overflow = "hidden";
-
-  }
+  document.body.style.overflow = "hidden";
 
 }
 
