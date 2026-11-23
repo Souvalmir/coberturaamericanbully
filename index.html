@@ -1967,6 +1967,166 @@ footer a:hover {
   }
 
 }
+   /* =====================================================
+   CORES DA ÁRVORE GENEALÓGICA — LIU HAZE
+===================================================== */
+
+.liu-colors-section {
+  margin: 35px auto 45px;
+  padding: 30px 25px;
+  max-width: 1000px;
+  border: 1px solid rgba(201, 164, 92, 0.55);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.liu-colors-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.liu-colors-title span {
+  flex: 1;
+  max-width: 100px;
+  height: 1px;
+  background: #9f7f42;
+}
+
+.liu-colors-title h4 {
+  color: #f6a735;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.liu-colors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 20px;
+}
+
+.liu-color-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.liu-color-dot {
+  width: 29px;
+  height: 29px;
+  min-width: 29px;
+  border-radius: 50%;
+  border: 1px solid #c9a45c;
+  box-shadow: 0 0 9px rgba(201,164,92,0.12);
+}
+
+/* CORES SÓLIDAS */
+
+.dot-tri-black {
+  background: radial-gradient(circle at 35% 35%, #b38b5b 0 12%, transparent 13%),
+              #171717;
+}
+
+.dot-tri-blue {
+  background: radial-gradient(circle at 35% 35%, #bd9365 0 12%, transparent 13%),
+              #70869f;
+}
+
+.dot-black-tan {
+  background: linear-gradient(135deg, #171717 65%, #b98b59 66%);
+}
+
+.dot-blue-white {
+  background: linear-gradient(135deg, #71869e 58%, #f5f1e9 59%);
+}
+
+.dot-lilac {
+  background: #aa9bad;
+}
+
+.dot-chocolate {
+  background: #76503c;
+}
+
+.dot-lilac-white {
+  background: linear-gradient(135deg, #a99ba9 58%, #f5f1e9 59%);
+}
+
+.dot-blue-tan {
+  background: linear-gradient(135deg, #71869e 65%, #c49a68 66%);
+}
+
+.dot-blue-fawn {
+  background: linear-gradient(135deg, #a78b70 55%, #d0b18b 56%);
+}
+
+.dot-tri-color {
+  background: conic-gradient(#242424 0 65%, #b88a58 65% 82%, #eee8df 82%);
+}
+
+/* MERLE */
+
+.dot-lilac-merle {
+  background:
+    radial-gradient(ellipse at 25% 30%, #eee4ed 0 13%, transparent 15%),
+    radial-gradient(ellipse at 70% 65%, #706273 0 17%, transparent 19%),
+    #aa9bad;
+}
+
+.dot-choco-merle {
+  background:
+    radial-gradient(ellipse at 25% 30%, #d2b39c 0 13%, transparent 15%),
+    radial-gradient(ellipse at 70% 65%, #3e2b25 0 17%, transparent 19%),
+    #76503c;
+}
+
+.dot-tri-lilac {
+  background:
+    radial-gradient(circle at 30% 30%, #c59b70 0 13%, transparent 14%),
+    linear-gradient(135deg, #aa9bad 75%, #c59b70 76%);
+}
+
+.dot-tri-chocolate {
+  background:
+    radial-gradient(circle at 30% 30%, #c59b70 0 13%, transparent 14%),
+    linear-gradient(135deg, #76503c 75%, #c59b70 76%);
+}
+
+@media (max-width: 700px) {
+  .liu-colors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px 10px;
+  }
+
+  .liu-colors-section {
+    padding: 25px 13px;
+  }
+
+  .liu-colors-title h4 {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .liu-color-item {
+    font-size: 11px;
+    gap: 8px;
+  }
+
+  .liu-color-dot {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+  }
+}
    
   </style>
 
@@ -2419,6 +2579,50 @@ Liu Haze
       >
 
     </div>
+
+<div class="liu-colors-section">
+
+  <div class="liu-colors-title">
+    <span></span>
+    <h4>CORES DA ÁRVORE GENEALÓGICA DO LIU HAZE</h4>
+    <span></span>
+  </div>
+
+  <div class="liu-colors-grid">
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-tri-black"></span>Tri Black</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-tri-blue"></span>Tri Blue</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-black-tan"></span>Black and Tan</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-blue-white"></span>Blue and White</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-lilac-merle"></span>Tri Lilac Merle</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-lilac"></span>Lilac</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-choco-merle"></span>Tri Choco Merle</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-lilac-white"></span>Lilac and White</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-tri-lilac"></span>Tri Lilac</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-black-tan"></span>Black Tan White</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-tri-color"></span>Tri Color</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-blue-tan"></span>Blue Tan</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-blue-fawn"></span>Blue Fawn</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-tri-chocolate"></span>Tri Chocolate</div>
+
+    <div class="liu-color-item"><span class="liu-color-dot dot-lilac-merle"></span>Lilac Merle</div>
+
+  </div>
+</div>
+   
     <div class="bloodline-divider">
       <span></span>
       <h4>OS CANIS E AFIXOS PRESENTES NA LINHAGEM</h4>
